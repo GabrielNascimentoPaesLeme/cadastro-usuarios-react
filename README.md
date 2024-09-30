@@ -36,7 +36,7 @@ Este projeto é uma aplicação web para cadastro de usuários. Ele permite cria
     ```
 2. Entre na pasta do projeto:
     ```bash
-    cd back-end-repo
+    cd api-bd
     ```
 3. Instale as dependências:
     ```bash
