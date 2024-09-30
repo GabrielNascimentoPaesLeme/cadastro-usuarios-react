@@ -1,0 +1,121 @@
+
+/* Container principal */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #0e0e31; /* Fundo mais escuro */
+  padding: 30px;
+  border-radius: 10px;
+  margin: 20px 0px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Sombras suaves */
+}
+
+/* Inputs e botões no formulário */
+form input, form button {
+  padding: 10px 5px;
+  border-radius: 10px;
+  border: none;
+  background-color: #353e5e; /* Cor de fundo escura */
+  color: #ffffff; /* Texto branco */
+  font-size: 1rem;
+  
+}
+
+form input{
+  text-indent: 10px;
+}
+
+form input::placeholder {
+  color: #b0b0b0; /* Cor do placeholder para contraste */
+
+}
+
+/* Botão */
+form button {
+  background-color: #6200ea; /* Botão roxo */
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #3700b3; /* Escurecer o roxo ao passar o mouse */
+}
+
+/* Lista de usuários */
+.list-users {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Cada usuário */
+.user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #0e0e31;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombras leves */
+  transition: transform 0.2s ease;
+}
+
+.user:hover {
+  transform: scale(1.02); /* Efeito de destaque ao passar o mouse */
+}
+
+.users-info p {
+  text-align: start;
+  margin: 0;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 2px 0px;
+
+  & span{
+    font-weight: normal;
+  }
+}
+
+
+/* Botão de remover (lixeira) */
+.btn-trash {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.btn-trash img {
+  width: 24px;
+  height: 24px;
+}
+
+.btn-trash:hover {
+  transform: scale(1.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .user {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  form input, form button {
+    font-size: 0.9rem;
+  }
+}
