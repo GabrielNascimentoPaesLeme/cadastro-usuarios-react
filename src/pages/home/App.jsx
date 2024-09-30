@@ -43,6 +43,9 @@ function App() {
           email: email,
           age: idade
         })
+        setEmail('')
+        setName('')
+        setIdade('')
     
         getUsers()
   
@@ -72,16 +75,16 @@ function App() {
 
       <form onSubmit={handleSubmit}>
         <h1>Cadastro de Usuários</h1>
-        <input name='nome' type="text" onChange={(e) => setName(e.target.value)} required/>
-        <input name='email' type="email" onChange={(e) => setEmail(e.target.value)} />
-        <input name='idade' type="number" onChange={(e) => setIdade(e.target.value)}/>
-        {load && <button disabled onClick={criaUser}>Aguarde</button>}
+        <input name='nome' type="text" onChange={(e) => setName(e.target.value)} required value={name}/>
+        <input name='email' type="email" onChange={(e) => setEmail(e.target.value)} value={email} />
+        <input name='idade' type="number" onChange={(e) => setIdade(e.target.value)} value={idade}/>
+        {load && <button disabled>Aguarde</button>}
         {!load && <button  onClick={criaUser}>Cadastrar</button>}
       </form>
 
     
+    {load && <p>Carregando...</p>}
     <div className="list-users">
-      {load && <p>Carregando...</p>}
       {users.map( user => (
         <div className="user" key={user.id}>
           <div className="users-info">
