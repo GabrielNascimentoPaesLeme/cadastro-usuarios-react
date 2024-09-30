@@ -29,8 +29,35 @@ Este projeto é uma aplicação web para cadastro de usuários. Ele permite cria
     ```bash
     npm run dev
     ```
+    ### Back-End (Node/Prisma)
+1. Clone o repositório do back-end:
+    ```bash
+    git clone https://github.com/GabrielNascimentoPaesLeme/api-bd.git
+    ```
+2. Entre na pasta do projeto:
+    ```bash
+    cd api-bd
+    ```
+3. Instale as dependências:
+    ```bash
+    npm install
+    ```
+4. Configure o Prisma e o banco de dados:
+    ```bash
+    npx prisma migrate dev
+    ```
+5. Rode o servidor:
+    ```bash
+    npm run dev
+    ```
 
+    ## Acesse o Projeto Online
 
+Você pode acessar o projeto em: [meu-projeto](https://cadastro-usuarios-react.onrender.com/)
+
+## Contribuição
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir uma _issue_ ou enviar um _pull request_ com melhorias e correções.
 
 ## Como Usar
 
