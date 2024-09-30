@@ -30,27 +30,7 @@ Este projeto é uma aplicação web para cadastro de usuários. Ele permite cria
     npm run dev
     ```
 
-### Back-End (Node/Prisma)
-1. Clone o repositório do back-end:
-    ```bash
-    git clone https://github.com/seu-usuario/back-end-repo.git
-    ```
-2. Entre na pasta do projeto:
-    ```bash
-    cd back-end-repo
-    ```
-3. Instale as dependências:
-    ```bash
-    npm install
-    ```
-4. Configure o Prisma e o banco de dados:
-    ```bash
-    npx prisma migrate dev
-    ```
-5. Rode o servidor:
-    ```bash
-    npm run dev
-    ```
+
 
 ## Como Usar
 
