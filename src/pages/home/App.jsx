@@ -11,11 +11,15 @@ function App() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [idade, setIdade] = useState('')
+  const [load, setLoad] = useState(false)
 
 
   /* Pegando usuários no banco de dados */
   async function getUsers() {
+    setLoad(true)
     const usersApi = await api.get("/Users")
+
+    setLoad(false)
 
     setUsers(usersApi.data)
   }
@@ -65,16 +69,19 @@ function App() {
 
   return (
     <div className='container'>
+
       <form onSubmit={handleSubmit}>
         <h1>Cadastro de Usuários</h1>
         <input name='nome' type="text" onChange={(e) => setName(e.target.value)} required/>
         <input name='email' type="email" onChange={(e) => setEmail(e.target.value)} />
         <input name='idade' type="number" onChange={(e) => setIdade(e.target.value)}/>
-        <button variant='dark' onClick={criaUser}>Cadastrar</button>
+        {load && <button disabled onClick={criaUser}>Aguarde</button>}
+        {!load && <button  onClick={criaUser}>Cadastrar</button>}
       </form>
 
     
     <div className="list-users">
+      {load && <p>Carregando...</p>}
       {users.map( user => (
         <div className="user" key={user.id}>
           <div className="users-info">
