@@ -32,22 +32,27 @@ function App() {
   }
 
   async function criaUser() {
-    try{
-      await api.post("/Users", {
-        name: name,
-        email: email,
-        age: idade
-      })
+    if (name !== '' && email !== '' && idade !== ''){
+      try{
+        await api.post("/Users", {
+          name: name,
+          email: email,
+          age: idade
+        })
+    
+        getUsers()
   
-      getUsers()
-
-    } catch (error) {
-      if(error.response && error.response.status === 409) {
-        alert("Email já cadastrado")
-      } else{
-        alert("Erro ao cadastrar Email")
+      } catch (error) {
+        if(error.response && error.response.status === 409) {
+          alert("Email já cadastrado")
+        } else{
+          alert("Erro ao cadastrar Email")
+        }
       }
+    } else {
+      alert('Preencha todos os dados')
     }
+    
     
   }
 
