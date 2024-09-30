@@ -15,11 +15,11 @@ Este projeto é uma aplicação web para cadastro de usuários. Ele permite cria
 ### Front-End (React/Vite)
 1. Clone o repositório do front-end:
     ```bash
-    git clone https://github.com/seu-usuario/front-end-repo.git
+    git clone https://github.com/GabrielNascimentoPaesLeme/cadastro-usuarios-react
     ```
 2. Entre na pasta do projeto:
     ```bash
-    cd front-end-repo
+    cd user-register
     ```
 3. Instale as dependências:
     ```bash
